@@ -12,3 +12,5 @@ D:\CRISTINA\Facultate\Anul3\Semestrul2\MDS\CarRentalServicesWebApp\CarRentalServ
 D:\CRISTINA\Facultate\Anul3\Semestrul2\MDS\CarRentalServicesWebApp\CarRentalServicesWebApp\obj\Debug\netcoreapp2.1\CarRentalServicesWebApp.RazorTargetAssemblyInfo.cache
 D:\CRISTINA\Facultate\Anul3\Semestrul2\MDS\CarRentalServicesWebApp\CarRentalServicesWebApp\obj\Debug\netcoreapp2.1\CarRentalServicesWebApp.dll
 D:\CRISTINA\Facultate\Anul3\Semestrul2\MDS\CarRentalServicesWebApp\CarRentalServicesWebApp\obj\Debug\netcoreapp2.1\CarRentalServicesWebApp.pdb
+D:\CRISTINA\Facultate\Anul3\Semestrul2\MDS\CarRentalServicesWebApp\CarRentalServicesWebApp\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\CRISTINA\Facultate\Anul3\Semestrul2\MDS\CarRentalServicesWebApp\CarRentalServicesWebApp\bin\Debug\netcoreapp2.1\appsettings.json
