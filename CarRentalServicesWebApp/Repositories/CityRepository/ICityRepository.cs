@@ -8,7 +8,7 @@ using CarRentalServicesWebApp.Contexts;
 
 namespace CarRentalServicesWebApp.Repositories.CityRepository
 {
-    interface ICityRepository
+    public interface ICityRepository
     {
         List<City> GetAll();
         City Get(int Id);

@@ -7,7 +7,7 @@ using CarRentalServicesWebApp.Models;
 
 namespace CarRentalServicesWebApp.Repositories.ClientRepository
 {
-    interface IClientRepository
+    public interface IClientRepository
     {
         List<Client> GetAll();
         Client Get(string CNP);

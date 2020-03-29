@@ -6,7 +6,7 @@ using CarRentalServicesWebApp.Models;
 
 namespace CarRentalServicesWebApp.Repositories.ShopRepository
 {
-    interface IShopRepository
+    public interface IShopRepository
     {
         List<Shop> GetAll();
         Shop Get(int Id);
