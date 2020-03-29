@@ -7,7 +7,7 @@ using CarRentalServicesWebApp.Models;
 
 namespace CarRentalServicesWebApp.Repositories.RentalRepository
 {
-    interface IRentalRepository
+    public interface IRentalRepository
     {
         List<Rental> GetAll();
         Rental Get(int Id);
