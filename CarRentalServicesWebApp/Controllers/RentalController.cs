@@ -14,21 +14,27 @@ namespace CarRentalServicesWebApp.Controllers
     public class RentalController : ControllerBase
     {
         public IRentalRepository IRentalRepository { get; set; }
-        // GET: api/Provider
+
+        public RentalController(IRentalRepository rentalRepository)
+        {
+            IRentalRepository = rentalRepository;
+        }
+
+        // GET: api/Rental
         [HttpGet]
         public ActionResult<IEnumerable<Rental>> Get()
         {
             return IRentalRepository.GetAll();
         }
 
-        // GET: api/Provider/5
+        // GET: api/Rental/5
         [HttpGet("{id}")]
         public ActionResult<Rental> Get(int id)
         {
             return IRentalRepository.Get(id);
         }
 
-        // POST: api/Provider
+        // POST: api/Rental
         [HttpPost]
         public Rental Post(RentalDTO value)
         {
@@ -42,7 +48,7 @@ namespace CarRentalServicesWebApp.Controllers
             return IRentalRepository.Create(model);
         }
 
-        // PUT: api/Provider/5
+        // PUT: api/Rental/5
         [HttpPut("{id}")]
         public Rental Put(int id, RentalDTO value)
         {

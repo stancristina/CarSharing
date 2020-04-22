@@ -15,21 +15,26 @@ namespace CarRentalServicesWebApp.Controllers
     public class ClientController : ControllerBase
     {
         public IClientRepository IClientRepository { get; set; }
-        // GET: api/Provider
+
+        public ClientController(IClientRepository clientRepository)
+        {
+            IClientRepository = clientRepository;
+        }
+        // GET: api/Client
         [HttpGet]
         public ActionResult<IEnumerable<Client>> Get()
         {
             return IClientRepository.GetAll();
         }
 
-        // GET: api/Provider/5
+        // GET: api/Client/5
         [HttpGet("{id}")]
-        public ActionResult<Client> Get(string CNP)
+        public ActionResult<Client> Get(int Id)
         {
-            return IClientRepository.Get(CNP);
+            return IClientRepository.Get(Id);
         }
 
-        // POST: api/Provider
+        // POST: api/Client
         [HttpPost]
         public Client Post(ClientDTO value)
         {
@@ -43,19 +48,26 @@ namespace CarRentalServicesWebApp.Controllers
             return IClientRepository.Create(model);
         }
 
-        // PUT: api/Provider/5
+        // PUT: api/Client/5
         [HttpPut("{id}")]
-        public Client Put(string CNP, ClientDTO value)
+        public Client Put(int Id, ClientDTO value)
         {
-            Client model = IClientRepository.Get(CNP);
+            Client model = IClientRepository.Get(Id);
+            if (value.Id != 0)
+            {
+                model.Id = value.Id;
+            }
+
             if (value.CNP != null)
             {
                 model.CNP = value.CNP;
             }
+
             if (value.LastName != null)
             {
                 model.LastName = value.LastName;
             }
+
             if (value.FirstName != null)
             {
                 model.FirstName = value.FirstName;
@@ -66,9 +78,9 @@ namespace CarRentalServicesWebApp.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public Client Delete(String CNP)
+        public Client Delete(int Id)
         {
-            Client model = IClientRepository.Get(CNP);
+            Client model = IClientRepository.Get(Id);
             return IClientRepository.Delete(model);
         }
     }

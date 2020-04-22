@@ -9,9 +9,8 @@ namespace CarRentalServicesWebApp.DTOs
 {
 	public class CarDTO
 	{
+		public int Id { get; set; }
 		public string Model { get; set; }
 		public int ShopId { get; set; }
-		public List<int> RentalId { get; set; }
-
 	}
 }

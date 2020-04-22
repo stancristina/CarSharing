@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MDS\\CarSharing\\CarRentalServicesWebApp\\CarRentalServicesWebApp.csproj": {}
+    "D:\\CRISTINA\\Facultate\\Anul3\\Semestrul2\\MDS-corect\\CarSharing\\CarRentalServicesWebApp\\CarRentalServicesWebApp.csproj": {}
   },
   "projects": {
-    "D:\\MDS\\CarSharing\\CarRentalServicesWebApp\\CarRentalServicesWebApp.csproj": {
+    "D:\\CRISTINA\\Facultate\\Anul3\\Semestrul2\\MDS-corect\\CarSharing\\CarRentalServicesWebApp\\CarRentalServicesWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MDS\\CarSharing\\CarRentalServicesWebApp\\CarRentalServicesWebApp.csproj",
+        "projectUniqueName": "D:\\CRISTINA\\Facultate\\Anul3\\Semestrul2\\MDS-corect\\CarSharing\\CarRentalServicesWebApp\\CarRentalServicesWebApp.csproj",
         "projectName": "CarRentalServicesWebApp",
-        "projectPath": "D:\\MDS\\CarSharing\\CarRentalServicesWebApp\\CarRentalServicesWebApp.csproj",
-        "packagesPath": "C:\\Users\\alexandru.voinea\\.nuget\\packages\\",
-        "outputPath": "D:\\MDS\\CarSharing\\CarRentalServicesWebApp\\obj\\",
+        "projectPath": "D:\\CRISTINA\\Facultate\\Anul3\\Semestrul2\\MDS-corect\\CarSharing\\CarRentalServicesWebApp\\CarRentalServicesWebApp.csproj",
+        "packagesPath": "C:\\Users\\Vlad Coteanu\\.nuget\\packages\\",
+        "outputPath": "D:\\CRISTINA\\Facultate\\Anul3\\Semestrul2\\MDS-corect\\CarSharing\\CarRentalServicesWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\alexandru.voinea\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Vlad Coteanu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -88,7 +87,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
