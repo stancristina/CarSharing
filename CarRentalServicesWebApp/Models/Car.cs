@@ -10,7 +10,5 @@ namespace CarRentalServicesWebApp.Models
         public int Id { get; set; }
         public string Model { get; set; }
         public int ShopId { get; set; }
-
-        public List<Rental> Rental { get; set; }
     }
 }

@@ -34,9 +34,9 @@ namespace CarRentalServicesWebApp.Repositories.ClientRepository
             _context.SaveChanges();
             return result.Entity;
         }
-        public Client Get(string CNP)
+        public Client Get(int Id)
         {
-            return _context.Clients.SingleOrDefault(x => x.CNP == CNP);
+            return _context.Clients.SingleOrDefault(x => x.Id == Id);
         }
         public List<Client> GetAll()
         {
