@@ -11,7 +11,7 @@ namespace CarRentalServicesWebApp.Models
         public int CarId { get; set; }
         public int ClientId { get; set; }
         public string StartDate { get; set; }
-        public string Period { get; set; }
+        public int Period { get; set; }
 
         public virtual Client Client { get; set; }
         public virtual Car Car { get; set; }

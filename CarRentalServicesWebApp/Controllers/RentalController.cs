@@ -26,6 +26,7 @@ namespace CarRentalServicesWebApp.Controllers
         {
             return IRentalRepository.GetAll().Select(x => new RentalDTO()
             {
+                Id = x.Id,
                 StartDate = x.StartDate,
                 Period = x.Period,
                 ClientId = x.ClientId,
@@ -38,9 +39,20 @@ namespace CarRentalServicesWebApp.Controllers
 
         // GET: api/Rental/5
         [HttpGet("{id}")]
-        public ActionResult<Rental> Get(int id)
+        public ActionResult<RentalDTO> Get(int id)
         {
-            return IRentalRepository.Get(id);
+            Rental rental = IRentalRepository.Get(id);
+            return new RentalDTO()
+            {
+                Id = rental.Id,
+                StartDate = rental.StartDate,
+                Period = rental.Period,
+                ClientId = rental.ClientId,
+                ClientFirstName = rental.Client?.FirstName,
+                ClientLastName = rental.Client?.LastName,
+                CarId = rental.CarId,
+                CarModel = rental.Car?.Model
+            };
         }
 
         // POST: api/Rental
@@ -66,7 +78,7 @@ namespace CarRentalServicesWebApp.Controllers
             {
                 model.StartDate = value.StartDate;
             }
-            if (value.Period != null)
+            if (value.Period != 0)
             {
                 model.Period = value.Period;
             }

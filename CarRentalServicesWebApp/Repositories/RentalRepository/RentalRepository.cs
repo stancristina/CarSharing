@@ -23,7 +23,7 @@ namespace CarRentalServicesWebApp.Repositories.RentalRepository
         }
         public Rental Get(int Id)
         {
-            return _context.Rentals.SingleOrDefault(x => x.Id == Id);
+            return _context.Rentals.Include(p => p.Car).Include(p => p.Client).SingleOrDefault(x => x.Id == Id);
         }
         public List<Rental> GetAll()
         {

@@ -8,8 +8,9 @@ namespace CarRentalServicesWebApp.DTOs
 {
 	public class RentalDTO
 	{
+		public int Id { get; set; }
 		public string StartDate { get; set; }
-		public string Period { get; set; }
+		public int Period { get; set; }
 		public int ClientId { get; set; }
 		public int CarId { get; set; }
 		public String CarModel { get; set; }
