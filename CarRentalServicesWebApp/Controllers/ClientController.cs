@@ -43,6 +43,7 @@ namespace CarRentalServicesWebApp.Controllers
                 CNP = value.CNP,
                 LastName = value.LastName,
                 FirstName = value.FirstName,
+                Address = value.Address
               
             };
             return IClientRepository.Create(model);
@@ -72,7 +73,12 @@ namespace CarRentalServicesWebApp.Controllers
             {
                 model.FirstName = value.FirstName;
             }
-            
+
+            if (value.Address != null)
+            {
+                model.Address = value.Address;
+            }
+
             return IClientRepository.Update(model);
         }
 

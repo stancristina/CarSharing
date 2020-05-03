@@ -22,9 +22,18 @@ namespace CarRentalServicesWebApp.Controllers
 
         // GET: api/Rental
         [HttpGet]
-        public ActionResult<IEnumerable<Rental>> Get()
+        public ActionResult<IEnumerable<RentalDTO>> Get()
         {
-            return IRentalRepository.GetAll();
+            return IRentalRepository.GetAll().Select(x => new RentalDTO()
+            {
+                StartDate = x.StartDate,
+                Period = x.Period,
+                ClientId = x.ClientId,
+                ClientFirstName = x.Client?.FirstName,
+                ClientLastName = x.Client?.LastName,
+                CarId = x.CarId,
+                CarModel = x.Car?.Model
+            }).ToList();
         }
 
         // GET: api/Rental/5

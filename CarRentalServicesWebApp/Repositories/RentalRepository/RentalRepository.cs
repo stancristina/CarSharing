@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CarRentalServicesWebApp.Contexts;
 using CarRentalServicesWebApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarRentalServicesWebApp.Repositories.RentalRepository
 {
@@ -26,7 +27,7 @@ namespace CarRentalServicesWebApp.Repositories.RentalRepository
         }
         public List<Rental> GetAll()
         {
-            return _context.Rentals.ToList();
+            return _context.Rentals.Include(p => p.Car).Include(p => p.Client).ToList();
         }
         public Rental Update(Rental Rental)
         {

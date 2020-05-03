@@ -12,5 +12,8 @@ namespace CarRentalServicesWebApp.DTOs
 		public string Period { get; set; }
 		public int ClientId { get; set; }
 		public int CarId { get; set; }
+		public String CarModel { get; set; }
+		public String ClientFirstName { get; set; }
+		public String ClientLastName { get; set; }
 	}
 }
