@@ -61,7 +61,7 @@ namespace CarRentalServicesWebApp.Controllers
         {
             Rental model = new Rental()
             {
-                StartDate = value.StartDate,
+                StartDate = value.dStartDate.ToString("dd-MM-yyyy"),
                 Period=value.Period,
                 ClientId=value.ClientId,
                 CarId=value.CarId
