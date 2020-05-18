@@ -42,6 +42,10 @@ namespace CarRentalServicesWebApp.Controllers
         public ActionResult<RentalDTO> Get(int id)
         {
             Rental rental = IRentalRepository.Get(id);
+            if (rental == null)
+            {
+                return new RentalDTO();
+            }
             return new RentalDTO()
             {
                 Id = rental.Id,
