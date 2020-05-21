@@ -42,7 +42,7 @@ namespace CarRentalServicesWebApp.Controllers
         public ActionResult<RentalDTO> Get(int id)
         {
             Rental rental = IRentalRepository.Get(id);
-            if(rental == null)
+            if (rental == null)
             {
                 return new RentalDTO();
             }
