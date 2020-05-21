@@ -35,8 +35,13 @@ namespace CarRentalServicesWebApp.Controllers
         public CarDTO Get(int id)
         {
             Car car = ICarRepository.Get(id);
+            if (car == null)
+            {
+                return new CarDTO();
+            }
             CarDTO carDTO = new CarDTO()
             {
+                Id = car.Id,
                 Model = car.Model,
                 ShopId = car.ShopId
             };
@@ -72,6 +77,7 @@ namespace CarRentalServicesWebApp.Controllers
             {
                 model.ShopId = value.ShopId;
             }
+            
 
             ICarRepository.Update(model);
 
