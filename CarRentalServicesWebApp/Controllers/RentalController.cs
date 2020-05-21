@@ -42,6 +42,10 @@ namespace CarRentalServicesWebApp.Controllers
         public ActionResult<RentalDTO> Get(int id)
         {
             Rental rental = IRentalRepository.Get(id);
+            if(rental == null)
+            {
+                return new RentalDTO();
+            }
             return new RentalDTO()
             {
                 Id = rental.Id,
@@ -74,9 +78,9 @@ namespace CarRentalServicesWebApp.Controllers
         public Rental Put(int id, RentalDTO value)
         {
             Rental model = IRentalRepository.Get(id);
-            if (value.StartDate != null)
+            if (value.dStartDate.ToString("dd-MM-yyyy") != null)
             {
-                model.StartDate = value.StartDate;
+                model.StartDate = value.dStartDate.ToString("dd-MM-yyyy");
             }
             if (value.Period != 0)
             {

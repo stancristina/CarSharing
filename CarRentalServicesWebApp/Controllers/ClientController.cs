@@ -22,9 +22,18 @@ namespace CarRentalServicesWebApp.Controllers
         }
         // GET: api/Client
         [HttpGet]
-        public ActionResult<IEnumerable<Client>> Get()
+        public ActionResult<IEnumerable<ClientDTO>> Get()
         {
-            return IClientRepository.GetAll();
+            return IClientRepository.GetAll().Select(x => new ClientDTO()
+            {
+                Id = x.Id,
+                CNP = x.CNP,
+                LastName = x.LastName,
+                FirstName = x.FirstName,
+                Address=x.Address
+            }).ToList();
+
+           
         }
 
         // GET: api/Client/5
